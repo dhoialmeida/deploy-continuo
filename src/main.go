@@ -10,7 +10,7 @@ import (
 func NegritoSqrt(texto string) string {
 	x := 0.0
 	for i := 0; i < 1000000; i++ {
-		x += math.Sqrt(i);
+		x += math.Sqrt(float64(i));
 	}
 	return "<b>" + texto + "</b>"
 }
