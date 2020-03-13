@@ -17,3 +17,8 @@ spec:
           image: dhoialmeida/go-hpa
           ports:
             - containerPort: 8000
+          resources:
+            requests:
+              cpu: "50m"
+            limits:
+              cpu: "100m"
