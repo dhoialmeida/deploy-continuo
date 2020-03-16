@@ -42,3 +42,14 @@ steps:
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
   - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
+
+- id: 'Efetuando deploy do HPA'
+  waitFor: ["Push da imagem"]
+  name: 'gcr.io/cloud-builders/kubectl'
+  args:
+    - 'apply'
+    - '-f'
+    - 'hpa.yaml'
+  env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
