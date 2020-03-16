@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: go-hpa
-          image: dhoialmeida/go-hpa
+          image: img-go-hpa-deployment
           ports:
             - containerPort: 8000
           resources:
